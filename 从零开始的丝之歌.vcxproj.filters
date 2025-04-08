@@ -72,6 +72,15 @@
     <ClInclude Include="从零开始的丝之歌\code\hornet_idle_state.h">
       <Filter>头文件\player\FSM</Filter>
     </ClInclude>
+    <ClInclude Include="从零开始的丝之歌\code\hornet_walk_state.h">
+      <Filter>头文件\player\FSM</Filter>
+    </ClInclude>
+    <ClInclude Include="从零开始的丝之歌\code\hornet_jump_state.h">
+      <Filter>头文件\player\FSM</Filter>
+    </ClInclude>
+    <ClInclude Include="从零开始的丝之歌\code\hornet_fall_state.h">
+      <Filter>头文件\player\FSM</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="从零开始的丝之歌\code\main.cpp">
@@ -90,6 +99,15 @@
       <Filter>头文件\collision</Filter>
     </ClCompile>
     <ClCompile Include="从零开始的丝之歌\code\hornet_idle_state.cpp">
+      <Filter>头文件\player\FSM</Filter>
+    </ClCompile>
+    <ClCompile Include="从零开始的丝之歌\code\hornet_walk_state.cpp">
+      <Filter>头文件\player\FSM</Filter>
+    </ClCompile>
+    <ClCompile Include="从零开始的丝之歌\code\hornet_jump_state.cpp">
+      <Filter>头文件\player\FSM</Filter>
+    </ClCompile>
+    <ClCompile Include="从零开始的丝之歌\code\hornet_fall_state.cpp">
       <Filter>头文件\player\FSM</Filter>
     </ClCompile>
   </ItemGroup>

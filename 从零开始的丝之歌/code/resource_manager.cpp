@@ -8,6 +8,16 @@ void ResourceManager::load_resources() {
 	load_animation(AnimationID::HornetIdleLeft, animation_pool[AnimationID::HornetIdleRight]);
 	load_animation(_T("resources/charactor/hornet/Walk/%d.png"), AnimationID::HornetWalkRight, 8);
 	load_animation(AnimationID::HornetWalkLeft, animation_pool[AnimationID::HornetWalkRight]);
+	load_animation(_T("resources/charactor/hornet/WalkStart/%d.png"), AnimationID::HornetWalkStartRight, 6);
+	load_animation(AnimationID::HornetWalkStartLeft, animation_pool[AnimationID::HornetWalkStartRight]);
+	load_animation(_T("resources/charactor/hornet/WalkEnd/%d.png"), AnimationID::HornetWalkEndRight, 3);
+	load_animation(AnimationID::HornetWalkEndLeft, animation_pool[AnimationID::HornetWalkEndRight]);
+	load_animation(_T("resources/charactor/hornet/Turn/%d.png"), AnimationID::HornetTurnRight, 3);
+	load_animation(AnimationID::HornetTurnLeft, animation_pool[AnimationID::HornetTurnRight]);
+	load_animation(_T("resources/charactor/hornet/Jump/%d.png"), AnimationID::HornetJumpRight, 6);
+	load_animation(AnimationID::HornetJumpLeft, animation_pool[AnimationID::HornetJumpRight]);
+	load_animation(_T("resources/charactor/hornet/Fall/%d.png"), AnimationID::HornetFallRight, 4);
+	load_animation(AnimationID::HornetFallLeft, animation_pool[AnimationID::HornetFallRight]);
 
 	init_animation();
 }
@@ -48,5 +58,37 @@ void ResourceManager::init_animation() {
 	anim->set_interval(0.10);
 
 	anim = animation_pool[AnimationID::HornetWalkLeft];
+	anim->set_interval(0.10);
+
+	anim = animation_pool[AnimationID::HornetWalkStartRight];
+	anim->set_interval(0.07);
+
+	anim = animation_pool[AnimationID::HornetWalkStartLeft];
+	anim->set_interval(0.07);
+
+	anim = animation_pool[AnimationID::HornetWalkEndRight];
+	anim->set_interval(0.10);
+
+	anim = animation_pool[AnimationID::HornetWalkEndLeft];
+	anim->set_interval(0.10);
+
+	anim = animation_pool[AnimationID::HornetTurnRight];
+	anim->set_interval(0.05);
+
+	anim = animation_pool[AnimationID::HornetTurnLeft];
+	anim->set_interval(0.05);
+
+	anim = animation_pool[AnimationID::HornetJumpRight];
+	anim->set_interval(0.13);
+	anim->set_is_loop(false);
+
+	anim = animation_pool[AnimationID::HornetJumpLeft];
+	anim->set_interval(0.13);
+	anim->set_is_loop(false);
+
+	anim = animation_pool[AnimationID::HornetFallRight];
+	anim->set_interval(0.10);
+
+	anim = animation_pool[AnimationID::HornetFallLeft];
 	anim->set_interval(0.10);
 }

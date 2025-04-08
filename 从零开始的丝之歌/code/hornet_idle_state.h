@@ -16,5 +16,15 @@ public:
 	
 	Animation* get_animation() override;
 private:
+	bool is_attacking = false;
+	bool is_attack_cd_comp = true;
+
+	bool is_left_key_down = false;
+	bool is_right_key_down = false;
+	bool is_jump_key_down = false;
+	bool is_roll_key_down = false;
+	bool is_attack_key_down = false;
+
+	bool is_on_ground = false;
 };
 #endif // HORNET_IDLE_STATE_H

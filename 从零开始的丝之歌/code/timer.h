@@ -1,6 +1,7 @@
 #ifndef TIMER_H
 #define TIMER_H
 #include <functional>
+#include <iostream>
 
 class Timer
 {
@@ -34,10 +35,11 @@ public:
 		if (paused) return;
 		pass_time += delta_time;
 		if (pass_time >= wait_time) {
-			bool can_shot = (!one_shot || (!shotted && one_shot));;
+			bool can_shot = (!one_shot || (!shotted && one_shot));
 			if (can_shot) {
 				shotted = true;
-				if (callback) callback();
+				if (!(callback == nullptr)) 
+					callback();
 				pass_time -= wait_time;
 			}
 		}
@@ -49,7 +51,7 @@ private:
 	bool shotted = false;
 	bool paused = false;
 	bool one_shot = false;
-    std::function<void()> callback;
+    std::function<void()> callback = nullptr;
 };
 
 #endif // TIMER_H

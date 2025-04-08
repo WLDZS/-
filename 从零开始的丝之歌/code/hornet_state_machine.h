@@ -8,6 +8,9 @@ class Hornet;
 enum class HornetStateID
 {
 	Idle,
+	Walk,
+	Jump,
+	Fall
 };
 
 class HornetStateMachine
@@ -25,8 +28,9 @@ public:
 	virtual Animation* get_animation() = 0;
 
 protected:
-	Animation* state_animation = nullptr;
+	Animation* current_animation = nullptr;
 	Hornet* hornet;
+	bool is_inited = false;
 };
 
 #endif // HORNET_STATE_MACHINE_H

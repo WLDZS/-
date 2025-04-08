@@ -14,7 +14,17 @@ enum class AnimationID
 	HornetIdleLeft,
 	HornetWalkRight,
 	HornetWalkLeft,
-	HornetTurn,
+	HornetWalkStartRight,
+	HornetWalkStartLeft,
+	HornetWalkEndRight,
+	HornetWalkEndLeft,
+	HornetTurnRight,
+	HornetTurnLeft,
+	HornetJumpRight,
+	HornetJumpLeft,
+	HornetFallRight,
+	HornetFallLeft
+
 };
 
 enum class IMAGEID

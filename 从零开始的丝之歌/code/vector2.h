@@ -29,8 +29,9 @@ public:
     bool operator<(const Vector2& other) const { return x < other.x && y < other.y; }
     bool operator>=(const Vector2& other) const { return x >= other.x && y >= other.y; }
     bool operator<=(const Vector2& other) const { return x <= other.x && y <= other.y; }
-    bool approx() const { return length() < 0.00001; }
-
+    bool approach() const { return length() < 0.00001; }
+    bool approach_x() const { return x < 0.00001 && x > -0.00001; }
+    bool approach_y() const { return y < 0.00001 && y > -0.00001; }
 private:
 
 };

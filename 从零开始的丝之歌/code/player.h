@@ -8,7 +8,16 @@
 #include "resource_manager.h"
 #include "camera.h"
 
-class Player 
+
+enum class Dir
+{
+	Left,
+	Right,
+	Up,
+	Down,
+};
+
+class Player
 {
 
 public:
@@ -19,33 +28,23 @@ public:
 	virtual void on_render() = 0;
 	virtual void on_input(ExMessage& msg) = 0;
 	virtual Vector2& get_position() = 0;
+	virtual void set_position(const Vector2& pos) = 0;
+	virtual Vector2& get_velocity() = 0;
+	virtual void set_velocity(const Vector2& vel) = 0;
 	virtual void set_camera(Camera* camera) = 0;
-protected:
-	virtual void update_animation() = 0;
-protected:
-	const double ATACK_CD = 0.5;
-	const double SPEED = 300;
-	const double GRAVITY_SPEED = 2000;
-	const double JUMP_SPEED = 800;
+	virtual Dir get_dir() = 0;
+	virtual void set_dir(Dir dir) = 0;
+	virtual Dir get_last_dir() = 0;
+	virtual void set_last_dir(Dir dir) = 0;
 protected:
 	int hp = 5;
 	Vector2 velocity = Vector2(0, 0);
 	//ÖÐÐÄÎ»ÖÃ
 	Vector2 position = Vector2(0, 0);
-	Animation* current_animation = nullptr;
 
 	Camera* camera = nullptr;
-
-	bool is_attacking = false;
-	bool is_attack_cd_comp = true;
-
-	bool is_left_key_down = false;
-	bool is_right_key_down = false;
-	bool is_jump_key_down = false;
-	bool is_roll_key_down = false;
-	bool is_attack_key_down = false;
-
-	bool is_on_ground = false;
+	Dir dir = Dir::Right;  //0 left 1 right
+	Dir last_dir = Dir::Right;
 };
 
-#endif // PLAYER_H
+#endif // !PLAYER_H

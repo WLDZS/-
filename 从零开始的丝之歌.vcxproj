@@ -133,8 +133,11 @@
     <ClInclude Include="从零开始的丝之歌\code\collision_manager.h" />
     <ClInclude Include="从零开始的丝之歌\code\game_manager.h" />
     <ClInclude Include="从零开始的丝之歌\code\hornet.h" />
+    <ClInclude Include="从零开始的丝之歌\code\hornet_fall_state.h" />
     <ClInclude Include="从零开始的丝之歌\code\hornet_idle_state.h" />
+    <ClInclude Include="从零开始的丝之歌\code\hornet_jump_state.h" />
     <ClInclude Include="从零开始的丝之歌\code\hornet_state_machine.h" />
+    <ClInclude Include="从零开始的丝之歌\code\hornet_walk_state.h" />
     <ClInclude Include="从零开始的丝之歌\code\manager.h" />
     <ClInclude Include="从零开始的丝之歌\code\player.h" />
     <ClInclude Include="从零开始的丝之歌\code\resource_manager.h" />
@@ -146,7 +149,10 @@
     <ClCompile Include="从零开始的丝之歌\code\collision_manager.cpp" />
     <ClCompile Include="从零开始的丝之歌\code\game_manager.cpp" />
     <ClCompile Include="从零开始的丝之歌\code\hornet.cpp" />
+    <ClCompile Include="从零开始的丝之歌\code\hornet_fall_state.cpp" />
     <ClCompile Include="从零开始的丝之歌\code\hornet_idle_state.cpp" />
+    <ClCompile Include="从零开始的丝之歌\code\hornet_jump_state.cpp" />
+    <ClCompile Include="从零开始的丝之歌\code\hornet_walk_state.cpp" />
     <ClCompile Include="从零开始的丝之歌\code\main.cpp" />
     <ClCompile Include="从零开始的丝之歌\code\resource_manager.cpp" />
   </ItemGroup>

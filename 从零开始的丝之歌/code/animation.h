@@ -20,12 +20,13 @@ public:
 		timer.set_callback([&]() {
 			frame_index++;
 			if (frame_index >= frame_pool.size()) {
-				frame_index = is_loop? 0 : frame_pool.size() - 1;
-				if (on_finished && !is_loop) 
+				frame_index = is_loop ? 0 : frame_pool.size() - 1;
+				if (on_finished)
 					on_finished();
 			}
 		});
 	}
+
 	~Animation() = default;
 
 public:
@@ -58,6 +59,11 @@ public:
 		}
 	}
 
+	void restart() {
+		frame_index = 0;
+		timer.restart();
+	}
+
 	void on_update(double delta_time) {
 		timer.on_update(delta_time);
 	}
@@ -75,7 +81,6 @@ public:
 	}
 
 	void set_is_loop(bool is_loop) {
-		timer.set_one_shot(!is_loop);
 		this->is_loop = is_loop;
 	}
 
@@ -87,13 +92,20 @@ public:
 		return frame_pool;
 	}
 
+	int get_frame_index() {
+		return frame_index;
+	}
+
+	void set_frame_index(int frame_index) {
+		this->frame_index = frame_index;
+	}
 
 private:
 	int frame_index = 0;
 	Vector2 position = Vector2(0, 0);
 	FramePool frame_pool;
 	Timer timer;
-	OnFinished on_finished;
+	OnFinished on_finished = nullptr;
 	bool is_loop = true;
 };
 
