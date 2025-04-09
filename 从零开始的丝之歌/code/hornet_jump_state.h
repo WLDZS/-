@@ -5,7 +5,7 @@
 
 class HornetJumpState : public HornetStateMachine
 {
-public:
+public: 
 	HornetJumpState(Hornet* hornet);
 public:
 	void on_enter() override;

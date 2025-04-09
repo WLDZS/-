@@ -29,7 +29,8 @@ enum class AnimationID
 
 enum class IMAGEID
 {
-	Background,
+	BackGround,
+	PlatForm_1,
 };
 
 class ResourceManager : public Manager<ResourceManager>

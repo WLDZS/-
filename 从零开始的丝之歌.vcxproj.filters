@@ -19,14 +19,26 @@
     <Filter Include="头文件\tool">
       <UniqueIdentifier>{4fae16db-43d1-4266-8e45-8d3bcf5db1cb}</UniqueIdentifier>
     </Filter>
-    <Filter Include="头文件\player">
-      <UniqueIdentifier>{7456120b-1d0b-443f-a299-c04fc29641c5}</UniqueIdentifier>
-    </Filter>
     <Filter Include="头文件\collision">
       <UniqueIdentifier>{5a859b5e-59d6-4f9f-8aa7-ea9211cf8ca2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="头文件\player\FSM">
+    <Filter Include="头文件\scene">
+      <UniqueIdentifier>{3dfb10b4-c318-4bc2-a2f8-c47c3902d640}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\game_object">
+      <UniqueIdentifier>{7456120b-1d0b-443f-a299-c04fc29641c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\game_object\FSM">
       <UniqueIdentifier>{b8ce9773-f225-4382-9770-fca20b8dfaaa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\game_object\environment">
+      <UniqueIdentifier>{2ce5ace2-199d-4560-8e72-bfbb0d939d2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\game_object\environment\plat_form">
+      <UniqueIdentifier>{e94090b5-cfaf-4191-bf96-ba6fe63cab74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\game_object\player">
+      <UniqueIdentifier>{b970726d-0d4d-494b-a111-d7fe5a06dfb5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -52,34 +64,46 @@
       <Filter>头文件\tool</Filter>
     </ClInclude>
     <ClInclude Include="从零开始的丝之歌\code\player.h">
-      <Filter>头文件\player</Filter>
+      <Filter>头文件\game_object</Filter>
     </ClInclude>
     <ClInclude Include="从零开始的丝之歌\code\camera.h">
       <Filter>头文件\tool</Filter>
     </ClInclude>
     <ClInclude Include="从零开始的丝之歌\code\hornet.h">
-      <Filter>头文件\player</Filter>
+      <Filter>头文件\game_object</Filter>
     </ClInclude>
     <ClInclude Include="从零开始的丝之歌\code\collision_box.h">
       <Filter>头文件\collision</Filter>
     </ClInclude>
-    <ClInclude Include="从零开始的丝之歌\code\collision_manager.h">
-      <Filter>头文件\collision</Filter>
-    </ClInclude>
     <ClInclude Include="从零开始的丝之歌\code\hornet_state_machine.h">
-      <Filter>头文件\player\FSM</Filter>
+      <Filter>头文件\game_object\FSM</Filter>
     </ClInclude>
     <ClInclude Include="从零开始的丝之歌\code\hornet_idle_state.h">
-      <Filter>头文件\player\FSM</Filter>
+      <Filter>头文件\game_object\FSM</Filter>
     </ClInclude>
     <ClInclude Include="从零开始的丝之歌\code\hornet_walk_state.h">
-      <Filter>头文件\player\FSM</Filter>
+      <Filter>头文件\game_object\FSM</Filter>
     </ClInclude>
     <ClInclude Include="从零开始的丝之歌\code\hornet_jump_state.h">
-      <Filter>头文件\player\FSM</Filter>
+      <Filter>头文件\game_object\FSM</Filter>
     </ClInclude>
     <ClInclude Include="从零开始的丝之歌\code\hornet_fall_state.h">
-      <Filter>头文件\player\FSM</Filter>
+      <Filter>头文件\game_object\FSM</Filter>
+    </ClInclude>
+    <ClInclude Include="从零开始的丝之歌\code\collision_manager.h">
+      <Filter>头文件\manager</Filter>
+    </ClInclude>
+    <ClInclude Include="从零开始的丝之歌\code\scene_manager.h">
+      <Filter>头文件\manager</Filter>
+    </ClInclude>
+    <ClInclude Include="从零开始的丝之歌\code\scene.h">
+      <Filter>头文件\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="从零开始的丝之歌\code\charactor.h">
+      <Filter>头文件\game_object</Filter>
+    </ClInclude>
+    <ClInclude Include="从零开始的丝之歌\code\plat_form.h">
+      <Filter>头文件\game_object\environment\plat_form</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -93,22 +117,25 @@
       <Filter>头文件\manager</Filter>
     </ClCompile>
     <ClCompile Include="从零开始的丝之歌\code\hornet.cpp">
-      <Filter>头文件\player</Filter>
-    </ClCompile>
-    <ClCompile Include="从零开始的丝之歌\code\collision_manager.cpp">
-      <Filter>头文件\collision</Filter>
+      <Filter>头文件\game_object</Filter>
     </ClCompile>
     <ClCompile Include="从零开始的丝之歌\code\hornet_idle_state.cpp">
-      <Filter>头文件\player\FSM</Filter>
+      <Filter>头文件\game_object\FSM</Filter>
     </ClCompile>
     <ClCompile Include="从零开始的丝之歌\code\hornet_walk_state.cpp">
-      <Filter>头文件\player\FSM</Filter>
+      <Filter>头文件\game_object\FSM</Filter>
     </ClCompile>
     <ClCompile Include="从零开始的丝之歌\code\hornet_jump_state.cpp">
-      <Filter>头文件\player\FSM</Filter>
+      <Filter>头文件\game_object\FSM</Filter>
     </ClCompile>
     <ClCompile Include="从零开始的丝之歌\code\hornet_fall_state.cpp">
-      <Filter>头文件\player\FSM</Filter>
+      <Filter>头文件\game_object\FSM</Filter>
+    </ClCompile>
+    <ClCompile Include="从零开始的丝之歌\code\collision_manager.cpp">
+      <Filter>头文件\manager</Filter>
+    </ClCompile>
+    <ClCompile Include="从零开始的丝之歌\code\scene_manager.cpp">
+      <Filter>头文件\manager</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -1,11 +1,13 @@
 #ifndef GAME_MANAGER_H
 #define GAME_MANAGER_H
 
+#include <graphics.h>
 #include "manager.h"
 #include "timer.h"
 #include "player.h"
 #include "camera.h"
-#include <graphics.h>
+#include "plat_form.h"
+
 
 class GameManager : public Manager<GameManager>
 {
@@ -14,6 +16,8 @@ class GameManager : public Manager<GameManager>
 public:
 
 	int run(int argc, char* argv[]);
+
+private:
 
 	void on_input(ExMessage& msg);
 
@@ -29,10 +33,10 @@ protected:
 	GameManager();
 
 	~GameManager() = default;
-
 private:
-	Player *player = nullptr;
-	Camera *camera = nullptr;
-};
+	Player* player;
+	Camera* camera;
+	PlatForm* plat_form;
+};	
 
 #endif // GAME_MANAGER_H

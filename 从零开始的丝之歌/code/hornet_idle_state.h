@@ -19,11 +19,9 @@ private:
 	bool is_attacking = false;
 	bool is_attack_cd_comp = true;
 
-	bool is_left_key_down = false;
-	bool is_right_key_down = false;
-	bool is_jump_key_down = false;
-	bool is_roll_key_down = false;
-	bool is_attack_key_down = false;
+	bool is_A_key_down = false;
+	bool is_D_key_down = false;
+	bool is_space_key_down = false;
 
 	bool is_on_ground = false;
 };

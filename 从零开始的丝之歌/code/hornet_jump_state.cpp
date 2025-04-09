@@ -8,11 +8,11 @@ void HornetJumpState::on_enter() {
 
 	if (is_inited == true) return;
 
-	if (hornet->get_dir() == Dir::Right) {
+	if (hornet->get_facing_dir() == Dir::Right) {
 		current_animation = ResourceManager::instance()->find_animation(AnimationID::HornetJumpRight);
 		current_animation->restart();
 	}
-	if (hornet->get_dir() == Dir::Left) {
+	if (hornet->get_facing_dir() == Dir::Left) {
 		current_animation = ResourceManager::instance()->find_animation(AnimationID::HornetJumpLeft);
 		current_animation->restart();
 	}
@@ -26,13 +26,13 @@ void HornetJumpState::on_input(ExMessage& msg) {
 
 void HornetJumpState::on_update(double delta_time) {
 	current_animation->on_update(delta_time);
-	if (hornet->get_dir() != hornet->get_last_dir()) {
-		if (hornet->get_dir() == Dir::Right) {
+	if (hornet->get_facing_dir() != hornet->get_last_facing_dir()) {
+		if (hornet->get_facing_dir() == Dir::Right) {
 			int frame_idx = current_animation->get_frame_index();
 			current_animation = ResourceManager::instance()->find_animation(AnimationID::HornetJumpRight);
 			current_animation->set_frame_index(frame_idx);
 		}
-		if (hornet->get_dir() == Dir::Left) {
+		if (hornet->get_facing_dir() == Dir::Left) {
 			int frame_idx = current_animation->get_frame_index();
 			current_animation = ResourceManager::instance()->find_animation(AnimationID::HornetJumpLeft);
 			current_animation->set_frame_index(frame_idx);

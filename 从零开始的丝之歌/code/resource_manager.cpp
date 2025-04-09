@@ -2,7 +2,8 @@
 #include "animation.h"
 
 void ResourceManager::load_resources() {
-	load_image(_T("resources/background/background.png"), IMAGEID::Background);
+	load_image(_T("resources/background/background.png"), IMAGEID::BackGround);
+	load_image(_T("resources/PlatForm/Floor_1.png"), IMAGEID::PlatForm_1);
 
 	load_animation(_T("resources/charactor/hornet/Idle/%d.png"), AnimationID::HornetIdleRight, 6);
 	load_animation(AnimationID::HornetIdleLeft, animation_pool[AnimationID::HornetIdleRight]);

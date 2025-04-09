@@ -11,6 +11,7 @@
 
 enum class Dir
 {
+	None,
 	Left,
 	Right,
 	Up,
@@ -32,10 +33,12 @@ public:
 	virtual Vector2& get_velocity() = 0;
 	virtual void set_velocity(const Vector2& vel) = 0;
 	virtual void set_camera(Camera* camera) = 0;
-	virtual Dir get_dir() = 0;
-	virtual void set_dir(Dir dir) = 0;
-	virtual Dir get_last_dir() = 0;
-	virtual void set_last_dir(Dir dir) = 0;
+	virtual Dir get_facing_dir() = 0;
+	virtual void set_facing_dir(Dir dir) = 0;
+	virtual Dir get_last_facing_dir() = 0;
+	virtual void set_last_facing_dir(Dir dir) = 0;
+	virtual void set_move_dir(Dir dir) = 0;
+	virtual Dir get_move_dir() = 0;
 protected:
 	int hp = 5;
 	Vector2 velocity = Vector2(0, 0);
@@ -43,8 +46,9 @@ protected:
 	Vector2 position = Vector2(0, 0);
 
 	Camera* camera = nullptr;
-	Dir dir = Dir::Right;  //0 left 1 right
-	Dir last_dir = Dir::Right;
+	Dir facing_dir = Dir::Right;  //0 left 1 right
+	Dir last_facing_dir = Dir::Right;
+	Dir move_dir = Dir::None;
 };
 
 #endif // !PLAYER_H

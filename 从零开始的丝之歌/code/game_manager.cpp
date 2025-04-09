@@ -1,13 +1,14 @@
 #include "game_manager.h"
 #include "resource_manager.h"
+#include "collision_manager.h"
 #include <thread>
 #include <iostream>
 #include <chrono>
 #include <string>
 #include <graphics.h>
+#include "hornet.h"
 //test
 #include "animation.h"
-#include "hornet.h"
 
 GameManager::GameManager() {
 	init();
@@ -18,9 +19,15 @@ void GameManager::init() {
 
 	player = new Hornet();
 	camera = new Camera();
+	plat_form = new PlatForm(Vector2(540, 720));
+
+	
+	camera->set_target_position(&player->get_position());
 
 	player->set_camera(camera);
-	camera->set_target_position(&player->get_position());
+	plat_form->set_camera(camera);
+
+	plat_form->set_image(ResourceManager::instance()->find_image(IMAGEID::PlatForm_1));
 }
 
 int GameManager::run(int argc, char* argv[]) {
@@ -75,12 +82,13 @@ void GameManager::on_input(ExMessage& msg) {
 
 void GameManager::on_update(double delta_time) {
 	player->on_update(delta_time);
-	camera->on_update();
+	CollisionManager::instance()->on_update();
 }
 
 void GameManager::on_render() {
 	static const Rect rect = { 0, 0, 1280, 720 };
-	putimage_ex(camera, ResourceManager::instance()->find_image(IMAGEID::Background), &rect);
+	putimage_ex(camera, ResourceManager::instance()->find_image(IMAGEID::BackGround), &rect);
+	plat_form->on_render();
 	player->on_render();
 }
 

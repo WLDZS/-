@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClInclude Include="从零开始的丝之歌\code\animation.h" />
     <ClInclude Include="从零开始的丝之歌\code\camera.h" />
+    <ClInclude Include="从零开始的丝之歌\code\charactor.h" />
     <ClInclude Include="从零开始的丝之歌\code\collision_box.h" />
     <ClInclude Include="从零开始的丝之歌\code\collision_manager.h" />
     <ClInclude Include="从零开始的丝之歌\code\game_manager.h" />
@@ -139,8 +140,11 @@
     <ClInclude Include="从零开始的丝之歌\code\hornet_state_machine.h" />
     <ClInclude Include="从零开始的丝之歌\code\hornet_walk_state.h" />
     <ClInclude Include="从零开始的丝之歌\code\manager.h" />
+    <ClInclude Include="从零开始的丝之歌\code\plat_form.h" />
     <ClInclude Include="从零开始的丝之歌\code\player.h" />
     <ClInclude Include="从零开始的丝之歌\code\resource_manager.h" />
+    <ClInclude Include="从零开始的丝之歌\code\scene.h" />
+    <ClInclude Include="从零开始的丝之歌\code\scene_manager.h" />
     <ClInclude Include="从零开始的丝之歌\code\timer.h" />
     <ClInclude Include="从零开始的丝之歌\code\util.h" />
     <ClInclude Include="从零开始的丝之歌\code\vector2.h" />
@@ -155,6 +159,7 @@
     <ClCompile Include="从零开始的丝之歌\code\hornet_walk_state.cpp" />
     <ClCompile Include="从零开始的丝之歌\code\main.cpp" />
     <ClCompile Include="从零开始的丝之歌\code\resource_manager.cpp" />
+    <ClCompile Include="从零开始的丝之歌\code\scene_manager.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

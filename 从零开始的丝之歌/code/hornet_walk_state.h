@@ -20,6 +20,7 @@ private:
 private:
 	bool is_A_key_down = false;
 	bool is_D_key_down = false;
+	bool is_space_key_down = false;
 };
 
 #endif // HORNET_WALK_STATE_H
